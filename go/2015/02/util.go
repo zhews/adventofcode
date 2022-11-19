@@ -6,6 +6,8 @@ import (
 	"strings"
 )
 
+const errorInvalidInstruction = "instruction is invalid, it should have 3 dimensions"
+
 func parseInstruction(instruction string) (int, int, int, error) {
 	dimensions := strings.Split(instruction, "x")
 	if len(dimensions) != 3 {

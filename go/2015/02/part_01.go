@@ -4,17 +4,15 @@ import (
 	"strings"
 )
 
-const errorInvalidInstruction = "instruction is invalid, it should have 3 dimensions"
-
 func Part1(input string) (int, error) {
 	instructions := strings.Split(input, "\n")
 	paperAmount := 0
 	for _, instruction := range instructions {
-		l, w, h, err := parseInstruction(instruction)
+		length, width, height, err := parseInstruction(instruction)
 		if err != nil {
 			return 0, err
 		}
-		paperAmountForPresent := calculatePaperAmountForPresent(l, w, h)
+		paperAmountForPresent := calculatePaperAmountForPresent(length, width, height)
 		paperAmount += paperAmountForPresent
 	}
 	return paperAmount, nil
