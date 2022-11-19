@@ -4,7 +4,7 @@ import "testing"
 
 func TestPart2(t *testing.T) {
 	type args struct {
-		input string
+		instructions string
 	}
 	tests := []struct {
 		name    string
@@ -15,7 +15,7 @@ func TestPart2(t *testing.T) {
 		{
 			name: "Example 1",
 			args: args{
-				input: ")",
+				instructions: ")",
 			},
 			want:    1,
 			wantErr: false,
@@ -23,7 +23,7 @@ func TestPart2(t *testing.T) {
 		{
 			name: "Example 2",
 			args: args{
-				input: "()())",
+				instructions: "()())",
 			},
 			want:    5,
 			wantErr: false,
@@ -31,7 +31,7 @@ func TestPart2(t *testing.T) {
 		{
 			name: "Empty Input",
 			args: args{
-				input: "",
+				instructions: "",
 			},
 			want:    0,
 			wantErr: true,
@@ -39,7 +39,7 @@ func TestPart2(t *testing.T) {
 		{
 			name: "Never Entering the Basement",
 			args: args{
-				input: "(",
+				instructions: "(",
 			},
 			want:    0,
 			wantErr: true,
@@ -47,7 +47,7 @@ func TestPart2(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got, err := Part2(tt.args.input)
+			got, err := Part2(tt.args.instructions)
 			if (err != nil) != tt.wantErr {
 				t.Errorf("Part2() error = %v, wantErr %v", err, tt.wantErr)
 				return

@@ -2,12 +2,12 @@ package main
 
 import "errors"
 
-func Part1(input string) (int, error) {
-	if len(input) == 0 {
+func Part1(instructions string) (int, error) {
+	if len(instructions) == 0 {
 		return 0, errors.New(errorEmptyInstructions)
 	}
 	floor := initialFloor
-	for _, instruction := range input {
+	for _, instruction := range instructions {
 		if instruction == instructionUp {
 			floor++
 		}

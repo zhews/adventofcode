@@ -6,12 +6,12 @@ const (
 	errorDidNotEnterBasement = "input never let santa enter the basement"
 )
 
-func Part2(input string) (int, error) {
-	if len(input) == 0 {
+func Part2(instructions string) (int, error) {
+	if len(instructions) == 0 {
 		return 0, errors.New(errorEmptyInstructions)
 	}
 	floor := initialFloor
-	for index, instruction := range input {
+	for index, instruction := range instructions {
 		if instruction == instructionUp {
 			floor++
 		}
