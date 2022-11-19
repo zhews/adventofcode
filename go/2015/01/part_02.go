@@ -7,6 +7,9 @@ const (
 )
 
 func Part2(input string) (int, error) {
+	if len(input) == 0 {
+		return 0, errors.New(errorEmptyInstructions)
+	}
 	floor := initialFloor
 	for index, instruction := range input {
 		if instruction == instructionUp {

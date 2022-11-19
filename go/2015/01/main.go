@@ -13,7 +13,10 @@ func main() {
 		panic(err)
 	}
 	input := string(inputBytes)
-	solutionPart1 := Part1(input)
+	solutionPart1, err := Part1(input)
+	if err != nil {
+		panic(err)
+	}
 	fmt.Printf("Part 1: %d\n", solutionPart1)
 	solutionPart2, err := Part2(input)
 	if err != nil {

@@ -1,7 +1,8 @@
 package main
 
 const (
-	initialFloor    = 0
-	instructionUp   = '('
-	instructionDown = ')'
+	initialFloor           = 0
+	instructionUp          = '('
+	instructionDown        = ')'
+	errorEmptyInstructions = "the instructions are empty"
 )
