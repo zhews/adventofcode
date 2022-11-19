@@ -7,7 +7,7 @@ const (
 )
 
 func Part2(input string) (int, error) {
-	floor := 0
+	floor := initialFloor
 	for index, instruction := range input {
 		if instruction == instructionUp {
 			floor++
