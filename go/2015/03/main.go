@@ -13,8 +13,8 @@ func main() {
 		panic(err)
 	}
 	input := string(inputBytes)
-	solutionPart1 := Part01(input)
-	fmt.Printf("Part 1: %d\n", solutionPart1)
-	solutionPart2 := Part02(input)
-	fmt.Printf("Part 2: %d\n", solutionPart2)
+	solutionPart01 := Part01(input)
+	fmt.Printf("Part 1: %d\n", solutionPart01)
+	solutionPart02 := Part02(input)
+	fmt.Printf("Part 2: %d\n", solutionPart02)
 }
