@@ -5,10 +5,10 @@ import (
 	"os"
 )
 
-const inputFile = "input.txt"
+const inputFileName = "input.txt"
 
 func main() {
-	inputBytes, err := os.ReadFile(inputFile)
+	inputBytes, err := os.ReadFile(inputFileName)
 	if err != nil {
 		panic(err)
 	}
