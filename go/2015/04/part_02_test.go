@@ -12,14 +12,14 @@ func TestPart02(t *testing.T) {
 		want int
 	}{
 		{
-			name: "Example 3",
+			name: "Example 1",
 			args: args{
 				secretKey: "abcdef",
 			},
 			want: 6742839,
 		},
 		{
-			name: "Example 4",
+			name: "Example 2",
 			args: args{
 				secretKey: "pqrstuv",
 			},
