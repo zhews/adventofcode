@@ -4,7 +4,7 @@ import (
 	"strings"
 )
 
-func Part1(input string) (int, error) {
+func Part01(input string) (int, error) {
 	instructions := strings.Split(input, "\n")
 	paperAmount := 0
 	for _, instruction := range instructions {

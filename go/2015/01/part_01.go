@@ -2,7 +2,7 @@ package main
 
 import "errors"
 
-func Part1(instructions string) (int, error) {
+func Part01(instructions string) (int, error) {
 	if len(instructions) == 0 {
 		return 0, errors.New(errorEmptyInstructions)
 	}

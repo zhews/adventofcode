@@ -2,7 +2,7 @@ package main
 
 import "strings"
 
-func Part2(input string) (int, error) {
+func Part02(input string) (int, error) {
 	instructions := strings.Split(input, "\n")
 	ribbonAmount := 0
 	for _, instruction := range instructions {

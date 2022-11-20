@@ -95,13 +95,13 @@ func TestPart1(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got, err := Part1(tt.args.instructions)
+			got, err := Part01(tt.args.instructions)
 			if (err != nil) != tt.wantErr {
-				t.Errorf("Part1() error = %v, wantErr %v", err, tt.wantErr)
+				t.Errorf("Part01() error = %v, wantErr %v", err, tt.wantErr)
 				return
 			}
 			if got != tt.want {
-				t.Errorf("Part1() got = %v, want %v", got, tt.want)
+				t.Errorf("Part01() got = %v, want %v", got, tt.want)
 			}
 		})
 	}

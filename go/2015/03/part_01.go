@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func Part1(directions string) int {
+func Part01(directions string) int {
 	history := map[string]bool{}
 	x, y := initialX, initialY
 	history[fmt.Sprintf("%dx%d", x, y)] = true

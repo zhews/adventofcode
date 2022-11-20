@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func Part2(directions string) int {
+func Part02(directions string) int {
 	history := map[string]bool{}
 	santaX, santaY, robotX, robotY := initialX, initialY, initialX, initialY
 	santasTurn := true

@@ -47,13 +47,13 @@ func TestPart2(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got, err := Part2(tt.args.input)
+			got, err := Part02(tt.args.input)
 			if (err != nil) != tt.wantErr {
-				t.Errorf("Part2() error = %v, wantErr %v", err, tt.wantErr)
+				t.Errorf("Part02() error = %v, wantErr %v", err, tt.wantErr)
 				return
 			}
 			if got != tt.want {
-				t.Errorf("Part2() got = %v, want %v", got, tt.want)
+				t.Errorf("Part02() got = %v, want %v", got, tt.want)
 			}
 		})
 	}

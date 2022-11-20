@@ -6,7 +6,7 @@ const (
 	errorDidNotEnterBasement = "input never let santa enter the basement"
 )
 
-func Part2(instructions string) (int, error) {
+func Part02(instructions string) (int, error) {
 	if len(instructions) == 0 {
 		return 0, errors.New(errorEmptyInstructions)
 	}
