@@ -1,22 +1,10 @@
-pub fn compute_calorie_totals(input: &str) -> Vec<i32> {
-    let mut calorie_total = 0;
-    let mut calorie_totals = Vec::new();
-    let lines = input.lines();
-    let last_index = lines.count();
-    let lines = input.lines();
-    for (index, line) in lines.enumerate() {
-        if line.is_empty() {
-            calorie_totals.push(calorie_total);
-            calorie_total = 0;
-            continue;
-        }
-        let calories: i32 = line.parse().expect("Invalid");
-        calorie_total += calories;
-        if index + 1 == last_index {
-            calorie_totals.push(calorie_total);
-        }
+pub fn compute_calories_totals(input: &str) -> Vec<i32> {
+    let mut calories_totals = Vec::new();
+    for elf_calories in input.split("\n\n") {
+        let calorie_total = elf_calories.lines().map(move |calorie| calorie.parse::<i32>().unwrap()).sum();
+        calories_totals.push(calorie_total);
     }
-    calorie_totals
+    calories_totals
 }
 
 #[cfg(test)]
@@ -25,13 +13,13 @@ mod test {
 
     #[test]
     fn empty_input() {
-        let calorie_totals = compute_calorie_totals("");
+        let calorie_totals = compute_calories_totals("");
         assert_eq!(calorie_totals.len(), 0)
     }
 
     #[test]
     fn example_input() {
-        let calorie_totals = compute_calorie_totals(r#"1000
+        let calorie_totals = compute_calorie_totals_2(r#"1000
 2000
 3000
 
