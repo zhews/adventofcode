@@ -3,9 +3,9 @@ use std::collections::HashSet;
 pub fn part_01(input: &str) -> i32 {
     let mut sum = 0;
     for line in input.lines() {
-        let middle = line.len() / 2;
-        let first_compartment: String = line.chars().take(middle).collect();
-        let second_compartment: String = line.chars().skip(middle).collect();
+        let midpoint = line.len() / 2;
+        let first_compartment: String = line.chars().take(midpoint).collect();
+        let second_compartment: String = line.chars().skip(midpoint).collect();
         let mut occurrences = HashSet::new();
         for item in first_compartment.chars() {
             if occurrences.contains(&item) {
