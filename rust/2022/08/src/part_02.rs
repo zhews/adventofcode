@@ -25,7 +25,7 @@ pub fn part_02(input: &str) -> usize {
                     break
                 }
             }
-            // up
+            // above
             for tree_index_up in (0..row_index).rev() {
                 let tree_up = map.get(tree_index_up).unwrap().get(tree_index).unwrap();
                 up += 1;
@@ -33,7 +33,7 @@ pub fn part_02(input: &str) -> usize {
                     break
                 }
             }
-            // down
+            // below
             for tree_index_down in row_index+1..map.len() {
                 let tree_down = map.get(tree_index_down).unwrap().get(tree_index).unwrap();
                 down += 1;
