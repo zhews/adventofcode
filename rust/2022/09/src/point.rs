@@ -1,35 +1,36 @@
+#[derive(Clone, Copy, Debug)]
 pub struct Point {
     pub x: i32,
     pub y: i32,
 }
 
 impl Point {
-    pub fn touches(&self, knot: &Point) -> bool {
-        if self.x == knot.x && self.y == knot.y {
+    pub fn touches(&self, point: &Point) -> bool {
+        if self.x == point.x && self.y == point.y {
             return true;
         }
-        if self.x == knot.x && self.y + 1 == knot.y {
+        if self.x == point.x && self.y + 1 == point.y {
             return true;
         }
-        if self.x == knot.x && self.y - 1 == knot.y {
+        if self.x == point.x && self.y - 1 == point.y {
             return true;
         }
-        if self.x + 1 == knot.x && self.y == knot.y {
+        if self.x + 1 == point.x && self.y == point.y {
             return true;
         }
-        if self.x - 1 == knot.x && self.y == knot.y {
+        if self.x - 1 == point.x && self.y == point.y {
             return true;
         }
-        if self.x + 1 == knot.x && self.y + 1 == knot.y {
+        if self.x + 1 == point.x && self.y + 1 == point.y {
             return true;
         }
-        if self.x - 1 == knot.x && self.y + 1 == knot.y {
+        if self.x - 1 == point.x && self.y + 1 == point.y {
             return true;
         }
-        if self.x + 1 == knot.x && self.y - 1 == knot.y {
+        if self.x + 1 == point.x && self.y - 1 == point.y {
             return true;
         }
-        if self.x - 1 == knot.x && self.y - 1 == knot.y {
+        if self.x - 1 == point.x && self.y - 1 == point.y {
             return true;
         }
         false
